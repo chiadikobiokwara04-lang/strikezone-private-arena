@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d14"><meta name="description" content="StrikeZone: Private Arena — squad up, enter a private room, and compete in a fast 5-minute arena match.">
+  <title>StrikeZone: Private Arena</title><link rel="stylesheet" href="/style.css">
+</head>
+<body class="lobby-body">
+  <div class="lobby-backdrop" aria-hidden="true"></div>
+  <div class="lobby-grid" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="hud-corner hud-corner-tl" aria-hidden="true"></div><div class="hud-corner hud-corner-br" aria-hidden="true"></div>
+  <header class="topbar"><a class="brand" href="/"><span class="brand-mark">S</span><span>STRIKE<span class="red">ZONE</span><small>PRIVATE ARENA</small></span></a><div class="online-pill"><span></span> <b class="online-label">MULTIPLAYER READY</b></div></header>
+  <main class="lobby-wrap">
+    <section class="hero-copy"><div class="eyebrow"><span></span> TACTICAL ARENA <i></i> 2–8 PLAYERS</div><div class="hero-kicker">OPERATION: SHIPYARD <span>///</span> DEPLOYMENT WINDOW OPEN</div><h1>YOUR ARENA.<br><span>YOUR RULES.</span></h1><p>Build your squad. Lock in your room. Five minutes to own the zone.</p><div class="feature-row"><div><strong>05:00</strong><small>MATCH LENGTH</small></div><div><strong>2–8</strong><small>PLAYERS</small></div><div><strong>2 TEAMS</strong><small>AUTO-BALANCED</small></div></div><div class="mission-status"><span class="status-bars"><i></i><i></i><i></i><i></i><i></i></span><span>SHIPYARD SECTOR</span><strong>ONLINE</strong></div></section>
+    <section class="lobby-card"><div class="card-top"><span class="live-dot"></span> DEPLOYMENT CONSOLE <span class="card-index">SZ / 01</span></div><div class="card-heading">READY TO <span>DEPLOY?</span></div><p class="card-intro">Identify your operator and choose your entry point.</p><label for="playerName">CALLSIGN</label><input id="playerName" maxlength="18" placeholder="Enter your callsign" autocomplete="nickname" value="Operator">
+      <button id="createBtn" class="btn btn-primary"><span>CREATE PRIVATE ROOM</span><span>↗</span></button>
+      <div class="or-divider"><span></span> OR JOIN YOUR SQUAD <span></span></div>
+      <label for="roomCode">ROOM CODE</label><div class="join-row"><input id="roomCode" maxlength="4" placeholder="AB12" autocomplete="off" autocapitalize="characters"><button id="joinBtn" class="btn btn-secondary">JOIN ↗</button></div>
+      <div id="lobbyMessage" class="message" aria-live="polite">Ready when you are, operator.</div>
+      <div class="card-foot"><span>PRIVATE BY CODE</span><span>NO DOWNLOAD REQUIRED</span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span><i class="footer-signal"></i> STRIKEZONE © 2026 · INDEPENDENT GAME PROTOTYPE</span><span>PLAY FAIR. PLAY SMART. <b>— STAY SHARP</b></span></footer>
+  <script src="/socket.io/socket.io.js"></script><script src="/lobby.js"></script>
+  <script src="/music.js"></script>
+</body></html>
